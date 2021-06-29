@@ -43,7 +43,7 @@ class EmployeeController extends Controller
             'email' => 'required|email|unique:employees,email',
             'phone' => 'required',
             'DateofBirth' => 'required',
-            'employeeImage' => 'required|image|mimes:png,jpg',
+            'employeeImage' => 'required',
         ]);
         if ($image = $request->file('employeeImage')) {
             $destinationPath = 'public/images/';
@@ -95,9 +95,7 @@ class EmployeeController extends Controller
             'email' => "required|email|unique:employees,email,$id",
             'phone' => 'required|numeric',
             'DateofBirth' => 'required',
-            'employeeImage' => 'required',
-            'employeeImage.*' => 'mimes:png,jpg'
-
+            'employeeImage' => 'required'
         ]);
         $employee = Employee::findOrFail($id);
         $employee->employeeName = $request->employeeName;
