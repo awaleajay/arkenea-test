@@ -24,7 +24,7 @@
                         <td>Address</td>
                         <td>Email Address</td>
                         <td>Phone</td>
-                        <td>Date of Birth</td>
+                        <td>DOB</td>
                         <td>Employee Image</td>
                         <td colspan="2">Actions</td>
                     </tr>
