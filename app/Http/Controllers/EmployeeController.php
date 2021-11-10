@@ -44,6 +44,7 @@ class EmployeeController extends Controller
             'phone' => 'required',
             'DateofBirth' => 'required',
             'employeeImage' => 'required',
+            'ajay' => 'req',
         ]);
         if ($image = $request->file('employeeImage')) {
             $destinationPath = 'public/images/';
